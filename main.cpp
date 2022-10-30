@@ -1,14 +1,14 @@
+// All the header files
 #include <iostream>
 #include <conio.h>
 #include <cstdlib>
 
-using namespace std;
 
 // Function to generate the random password
 void randomPasswordGenerator(int l)
 {
     // initializing the variables
-    string capital_case, small_case, numbers, symbols, characters, password;
+    std::string capital_case, small_case, numbers, symbols, characters, password;
 
     capital_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // All the capital letters
     small_case = "abcdefghijklmnopqrstuvwxyz"; // All the capital letters
@@ -36,7 +36,7 @@ void randomPasswordGenerator(int l)
     }
     
     // displaying the password
-    cout << password << endl;  
+    std::cout << password << std::endl;  
 
 }
 
@@ -44,8 +44,10 @@ void randomPasswordGenerator(int l)
 int main() {
 
     // length of the password
-    int l = 10;
-
+    int l;
+    std::cout << "Enter the length of the password: ";
+    std::cin >> l;    
+    
     // calling the function
     randomPasswordGenerator(l);
 
